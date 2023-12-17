@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 // Navbar Links
-nav a {
+.navlinks {
   position: relative;
+  letter-spacing: 2px;
 
   &::before {
     content: '';
