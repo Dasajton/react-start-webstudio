@@ -1,9 +1,9 @@
-import Button from '../components/Button';
+import HomeHeroSection from '../components/HomeHeroSection';
 
 const Home = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <HomeHeroSection />
     </div>
   );
 };

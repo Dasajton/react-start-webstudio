@@ -2,7 +2,7 @@ const Button = ({ children, variant, size, ...props }) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'secundary':
-        return 'bg-white text-black hover:bg-white/80';
+        return 'bg-white text-black hover:bg-white/90';
       default:
         return 'bg-lightblack text-white hover:bg-black/80';
     }
@@ -17,7 +17,7 @@ const Button = ({ children, variant, size, ...props }) => {
     }
   };
 
-  const buttonStyles = `rounded-md transition text-lg ${getVariantStyles()} ${getSizeStyles()}`;
+  const buttonStyles = `rounded-md transition text-lg font-arial hover:shadow-md ${getVariantStyles()} ${getSizeStyles()}`;
 
   return (
     <button className={buttonStyles} {...props}>
