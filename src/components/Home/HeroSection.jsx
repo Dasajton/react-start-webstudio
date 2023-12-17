@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div className="w-full bg-lightgreen text-white py-10 px-6 lg:px-32 flex flex-col justify-evenly lg:flex-row-reverse lg:justify-between gap-4">
       <img
-        className="w-fit h-fit self-center"
+        className="self-center object-cover"
         src="./images/hero-people.png"
         alt="hero working together"
       />
