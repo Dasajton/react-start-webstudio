@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import MenuLink from './MenuLink';
+import DropdownLink from './DropdownLink';
 
 const Navbar = () => {
   const links = [
@@ -7,6 +9,10 @@ const Navbar = () => {
     { path: '/services', label: 'Services' },
     { path: '/Contact', label: 'Contact' }
   ];
+
+  // Toggling Dropdown Menu
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   return (
     <nav className="w-full bg-lightgreen text-white font-work flex justify-between items-center px-8 lg:px-32 py-8">
@@ -22,9 +28,24 @@ const Navbar = () => {
           </MenuLink>
         ))}
       </ul>
-      <button className="lg:hidden">
+
+      <button className="lg:hidden" onClick={toggleDropdown}>
         <img src="./images/burgermenu.svg" alt="burger menu" />
       </button>
+
+      {isDropdownOpen && (
+        <div className="dropdown-menu flex flex-col items-center justify-evenly bg-lightgreen border-2 border-black rounded shadow-xl shadow-lightgreen mx-auto py-2 w-3/4 h-[32rem] absolute z-50 top-24 right-0 left-0 overflow-y-auto">
+          {links.map((link, index) => (
+            <DropdownLink
+              key={index}
+              handleClick={toggleDropdown}
+              to={link.path}
+            >
+              {link.label}
+            </DropdownLink>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };
