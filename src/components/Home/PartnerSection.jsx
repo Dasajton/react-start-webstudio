@@ -2,7 +2,7 @@ import Button from '../Utilities/Button';
 
 const PartnerSection = () => {
   return (
-    <div className="flex flex-col items-center py-10">
+    <div className="flex flex-col items-center py-10 px-6 lg:px-32">
       <div className="text-center">
         <h3 className="uppercase text-[#74C69D] font-work font-bold tracking-[0.3rem] pb-4">
           Partners
