@@ -1,6 +1,6 @@
 import Button from '../Utilities/Button';
 
-const HomePartnerSection = () => {
+const PartnerSection = () => {
   return (
     <div className="flex flex-col items-center py-10">
       <div className="text-center">
@@ -28,4 +28,4 @@ const HomePartnerSection = () => {
   );
 };
 
-export default HomePartnerSection;
+export default PartnerSection;

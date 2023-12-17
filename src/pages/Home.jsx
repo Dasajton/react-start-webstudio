@@ -1,11 +1,11 @@
-import HomeHeroSection from '../components/Home/HomeHeroSection';
-import HomePartnerSection from '../components/Home/HomePartnerSection';
+import HeroSection from '../components/Home/HeroSection';
+import PartnerSection from '../components/Home/PartnerSection';
 
 const Home = () => {
   return (
     <div>
-      <HomeHeroSection />
-      <HomePartnerSection />
+      <HeroSection />
+      <PartnerSection />
     </div>
   );
 };
