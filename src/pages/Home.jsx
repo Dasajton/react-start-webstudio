@@ -1,5 +1,5 @@
-import HomeHeroSection from '../components/HomeHeroSection';
-import HomePartnerSection from '../components/HomePartnerSection';
+import HomeHeroSection from '../components/Home/HomeHeroSection';
+import HomePartnerSection from '../components/Home/HomePartnerSection';
 
 const Home = () => {
   return (
