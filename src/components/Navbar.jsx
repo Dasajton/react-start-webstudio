@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MenuLink from './MenuLink';
 import DropdownLink from './DropdownLink';
 
@@ -23,10 +24,12 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-[10vh] bg-lightgreen text-white font-arial flex justify-between items-center px-6 lg:px-32 py-8">
-      <div className="logo-wrapper flex items-center gap-4">
-        <img className="w-16" src="./images/logo.svg" alt="logo" />
-        <h2 className="text-4xl font-medium tracking-wider">Start</h2>
-      </div>
+      <Link to="/">
+        <div className="logo-wrapper flex items-center gap-4">
+          <img className="w-16" src="./images/logo.svg" alt="logo" />
+          <h2 className="text-4xl font-medium tracking-wider">Start</h2>
+        </div>
+      </Link>
 
       <ul className="text-lg space-x-8 hidden lg:block">
         {links.map((link, index) => (
