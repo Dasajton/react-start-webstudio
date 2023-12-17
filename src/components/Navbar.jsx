@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MenuLink from './MenuLink';
 import DropdownLink from './DropdownLink';
 
@@ -13,6 +13,13 @@ const Navbar = () => {
   // Toggling Dropdown Menu
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
+  // Close Dropdown Menu on Window Resize
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) setIsDropdownOpen(false);
+    });
+  }, []);
 
   return (
     <nav className="w-full bg-lightgreen text-white font-work flex justify-between items-center px-8 lg:px-32 py-8">
